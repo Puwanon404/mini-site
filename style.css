@@ -1,13 +1,15 @@
 :root {
-  --bg: #ffffff;
+  --bg: #faf5ec;
+  --card: #ffffff;
   --bg-alt: #f6f6f6;
   --text: #171717;
   --text-muted: #6d6d6d;
-  --border: #e2e2e2;
+  --border: #e6ddca;
   --dark: #141414;
   --dark-text: #f2f2f2;
   --accent: #b8863b;
-  --accent-soft: #f6ecd9;
+  --accent-soft: #f1e2c4;
+  --accent-dark: #7a5a26;
 }
 
 * {
@@ -43,8 +45,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 6%;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  background: var(--dark);
+  border-bottom: 3px solid var(--accent);
 }
 
 .logo {
@@ -52,6 +54,7 @@ header {
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
+  color: var(--dark-text);
 }
 
 .logo span {
@@ -66,14 +69,14 @@ header nav {
 header nav a {
   font-size: 0.9rem;
   text-decoration: none;
-  color: var(--text-muted);
+  color: rgba(242, 242, 242, 0.7);
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 header nav a:hover {
-  color: var(--text);
+  color: var(--dark-text);
   border-bottom-color: var(--accent);
 }
 
@@ -133,10 +136,14 @@ header nav a:hover {
 }
 
 .role {
-  font-size: 1.05rem;
-  color: var(--accent);
+  display: inline-block;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin: 8px 0 20px;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin: 10px 0 22px;
 }
 
 .about-text {
@@ -167,16 +174,18 @@ header nav a:hover {
 
 .background-grid {
   display: flex;
-  gap: 1px;
-  background: var(--border);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  gap: 24px;
+  padding: 60px 6%;
+  background: var(--accent-soft);
 }
 
 .col {
   flex: 1;
-  background: var(--bg);
-  padding: 50px 5%;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 40px 34px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(120, 90, 38, 0.08);
 }
 
 .col h2 {
@@ -231,7 +240,7 @@ header nav a:hover {
 .skill-list li:hover {
   background: var(--accent-soft);
   border-color: var(--accent);
-  color: #7a5a26;
+  color: var(--accent-dark);
 }
 
 /* Experience — timeline signature element */
@@ -271,7 +280,7 @@ header nav a:hover {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: var(--bg);
+  background: var(--card);
   border: 2px solid var(--accent);
 }
 
@@ -294,6 +303,7 @@ footer {
   color: var(--dark-text);
   text-align: center;
   padding: 60px 6% 30px;
+  border-top: 3px solid var(--accent);
 }
 
 .footer-title {
@@ -353,10 +363,7 @@ footer {
 @media (max-width: 900px) {
   .background-grid {
     flex-direction: column;
-  }
-
-  .col {
-    border-bottom: 1px solid var(--border);
+    padding: 40px 6%;
   }
 }
 

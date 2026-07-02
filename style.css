@@ -6,6 +6,8 @@
   --border: #e2e2e2;
   --dark: #141414;
   --dark-text: #f2f2f2;
+  --accent: #b8863b;
+  --accent-soft: #f6ecd9;
 }
 
 * {
@@ -53,7 +55,7 @@ header {
 }
 
 .logo span {
-  color: var(--text-muted);
+  color: var(--accent);
 }
 
 header nav {
@@ -65,11 +67,14 @@ header nav a {
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--text-muted);
-  transition: color 0.2s ease;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 header nav a:hover {
   color: var(--text);
+  border-bottom-color: var(--accent);
 }
 
 /* ---------- Hero / About ---------- */
@@ -93,7 +98,9 @@ header nav a:hover {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  border: 1px solid var(--border);
+  border: 3px solid var(--accent);
+  outline: 1px solid var(--border);
+  outline-offset: 6px;
 }
 
 .hero-text {
@@ -106,6 +113,17 @@ header nav a:hover {
   font-size: 0.75rem;
   color: var(--text-muted);
   margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
 }
 
 .hero-text h1 {
@@ -116,7 +134,8 @@ header nav a:hover {
 
 .role {
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: var(--accent);
+  font-weight: 600;
   margin: 8px 0 20px;
 }
 
@@ -135,7 +154,8 @@ header nav a:hover {
 }
 
 .hero-links a:hover {
-  border-bottom-color: var(--text);
+  border-bottom-color: var(--accent);
+  color: var(--accent);
 }
 
 .divider {
@@ -165,7 +185,7 @@ header nav a:hover {
   letter-spacing: 0.1em;
   margin-bottom: 26px;
   padding-bottom: 14px;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 2px solid var(--accent);
   display: inline-block;
 }
 
@@ -205,6 +225,13 @@ header nav a:hover {
   border-radius: 20px;
   padding: 7px 16px;
   font-size: 0.9rem;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.skill-list li:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: #7a5a26;
 }
 
 /* Experience — timeline signature element */
@@ -245,7 +272,7 @@ header nav a:hover {
   height: 11px;
   border-radius: 50%;
   background: var(--bg);
-  border: 2px solid var(--text);
+  border: 2px solid var(--accent);
 }
 
 .timeline h3 {
@@ -288,10 +315,12 @@ footer {
   font-size: 0.9rem;
   border-bottom: 1px solid rgba(242, 242, 242, 0.3);
   padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .footer-links a:hover {
-  border-bottom-color: var(--dark-text);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .copyright {
@@ -310,13 +339,13 @@ footer {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--dark);
+  background: var(--accent);
   color: var(--dark-text);
   text-align: center;
   line-height: 42px;
   text-decoration: none;
   font-size: 1.1rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 14px rgba(184, 134, 59, 0.35);
 }
 
 /* ---------- Responsive ---------- */

@@ -12,6 +12,14 @@
   --accent-dark: #7a5a26;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 90px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -186,6 +194,22 @@ header nav a:hover {
   padding: 40px 34px;
   border: 1px solid var(--border);
   box-shadow: 0 10px 24px rgba(120, 90, 38, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+}
+
+/* when hovering the group, all cards ease back slightly */
+.background-grid:hover .col {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* the one actually under the cursor pops forward */
+.background-grid .col:hover {
+  transform: scale(1.04);
+  opacity: 1;
+  box-shadow: 0 16px 34px rgba(120, 90, 38, 0.16);
+  z-index: 2;
+  position: relative;
 }
 
 .col h2 {
@@ -403,5 +427,9 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
   }
 }

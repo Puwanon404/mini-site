@@ -38,6 +38,38 @@ function typeName() {
 
 document.addEventListener('DOMContentLoaded', typeName);
 
+/* ---------- Bio slider (Personal info ↔ About me) ---------- */
+
+(function () {
+  const track = document.getElementById('bioTrack');
+  const nextBtn = document.getElementById('arrowNext');
+  const prevBtn = document.getElementById('arrowPrev');
+  const dots = document.querySelectorAll('.dot');
+
+  if (!track) return;
+
+  function goToSlide(index) {
+    if (index === 1) {
+      track.classList.add('show-second');
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'flex';
+    } else {
+      track.classList.remove('show-second');
+      nextBtn.style.display = 'flex';
+      prevBtn.style.display = 'none';
+    }
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  nextBtn.addEventListener('click', function () { goToSlide(1); });
+  prevBtn.addEventListener('click', function () { goToSlide(0); });
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { goToSlide(i); });
+  });
+})();
+
 /* ---------- Dark / light mode toggle ---------- */
 
 (function () {

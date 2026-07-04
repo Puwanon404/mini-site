@@ -18,6 +18,7 @@
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
@@ -40,17 +41,43 @@
           <span class="typed-text">Puwanon Hayamin</span><span class="type-cursor" aria-hidden="true">|</span>
         </h1>
         <p class="role">Web Developer</p>
-        <p class="about-text">
-          จากไอเดียในหัวสู่เว็บไซต์ที่ใช้งานได้จริง — นั่นคือสิ่งที่ผมสนุกที่สุด
-          ผมเป็นนักศึกษาชั้นปีที่ 3 สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยวลัยลักษณ์
-          ที่หลงใหลในการแก้ปัญหาด้วยโค้ด ตั้งแต่ออกแบบหน้าตาให้ใช้งานง่าย
-          ไปจนถึงเขียนระบบเบื้องหลังให้ทำงานได้จริง ผมเชื่อว่าการลงมือทำโปรเจกต์จริง
-          คือครูที่ดีที่สุด เลยมักหาโจทย์ใหม่ ๆ มาท้าทายตัวเองอยู่เสมอ
-        </p>
-        <div class="hero-links">
-          <a href="mailto:Puwanon.ha@mail.wu.ac.th">Puwanon.ha@mail.wu.ac.th</a>
-          <span class="divider">·</span>
-          <a href="tel:0635847064">063-584-7064</a>
+
+        <div class="bio-slider">
+          <div class="slider-track" id="bioTrack">
+
+            <div class="slide">
+              <ul class="personal-info">
+                <li><span>ชื่อเล่น</span><strong>โต๋</strong></li>
+                <li><span>วันเกิด</span><strong>8 เม.ย. 2549 (อายุ 20 ปี)</strong></li>
+                <li><span>สัญชาติ</span><strong>ไทย</strong></li>
+                <li><span>ภาษา</span><strong>ไทย, อังกฤษ</strong></li>
+              </ul>
+              <div class="hero-links">
+                <a href="mailto:Puwanon.ha@mail.wu.ac.th">Puwanon.ha@mail.wu.ac.th</a>
+                <span class="divider">·</span>
+                <a href="tel:0635847064">063-584-7064</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <p class="about-text">
+                จากไอเดียในหัวสู่เว็บไซต์ที่ใช้งานได้จริง — นั่นคือสิ่งที่ผมสนุกที่สุด
+                ผมเป็นนักศึกษาชั้นปีที่ 3 สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยวลัยลักษณ์
+                ที่หลงใหลในการแก้ปัญหาด้วยโค้ด ตั้งแต่ออกแบบหน้าตาให้ใช้งานง่าย
+                ไปจนถึงเขียนระบบเบื้องหลังให้ทำงานได้จริง ผมเชื่อว่าการลงมือทำโปรเจกต์จริง
+                คือครูที่ดีที่สุด เลยมักหาโจทย์ใหม่ ๆ มาท้าทายตัวเองอยู่เสมอ
+              </p>
+            </div>
+
+          </div>
+
+          <button class="slide-arrow arrow-prev" id="arrowPrev" aria-label="ย้อนกลับไปประวัติส่วนตัว" style="display:none">‹</button>
+          <button class="slide-arrow arrow-next" id="arrowNext" aria-label="ไปหน้า About me">›</button>
+
+          <div class="slide-dots">
+            <span class="dot active" data-index="0" aria-label="ประวัติส่วนตัว"></span>
+            <span class="dot" data-index="1" aria-label="About me"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -71,9 +98,14 @@
         </div>
         <div class="col-content">
           <div class="edu-item">
-            <p class="edu-year">2024 — Present</p>
+            <p class="edu-year">2023 — Present</p>
             <h3>มหาวิทยาลัยวลัยลักษณ์</h3>
             <p class="edu-detail">สาขาวิศวกรรมคอมพิวเตอร์ · นักศึกษาชั้นปีที่ 3</p>
+          </div>
+          <div class="edu-item">
+            <p class="edu-year">2017 — 2023</p>
+            <h3>โรงเรียนนราธิวาส</h3>
+            <p class="edu-detail">มัธยมศึกษาตอนต้น–ปลาย (6 ปี)</p>
           </div>
         </div>
       </article>
@@ -120,6 +152,59 @@
         </div>
       </article>
 
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-thumb project-thumb-1" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="project-thumb-icon">
+              <path d="M32 6 L54 20 L54 44 L10 44 L10 20 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="32" cy="30" r="6" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>เว็บไซต์ค้นหาสถานที่ท่องเที่ยว</h3>
+            <p>
+              เว็บแอปสำหรับค้นหาและแนะนำสถานที่ท่องเที่ยวตามความสนใจของผู้ใช้
+              ออกแบบหน้าตาให้ใช้งานง่าย พร้อมระบบกรองและแสดงผลข้อมูลสถานที่
+              ให้เข้าใจง่ายและน่าสนใจ
+            </p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb project-thumb-2" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="project-thumb-icon">
+              <rect x="10" y="14" width="44" height="36" rx="3" fill="none" stroke="currentColor" stroke-width="3"/>
+              <path d="M10 24 H54" stroke="currentColor" stroke-width="3"/>
+              <circle cx="18" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="24" cy="19" r="1.6" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>เว็บไซต์ร้านค้าออนไลน์</h3>
+            <p>
+              จัดทำหน้าเว็บไซต์สำหรับร้านค้าออนไลน์ ครอบคลุมตั้งแต่หน้าแสดงสินค้า
+              ไปจนถึงหน้ารายละเอียดสินค้า เน้นโครงสร้าง HTML เชิงความหมาย
+              และจัดวางองค์ประกอบด้วย Flexbox/Grid ให้ตอบสนองได้ทุกขนาดหน้าจอ
+            </p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
     </section>
   </main>
 

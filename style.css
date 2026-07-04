@@ -643,93 +643,6 @@ header nav a:hover {
   font-size: 0.92rem;
 }
 
-/* ---------- Featured Projects ---------- */
-
-.section-title {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.projects {
-  padding: 70px 6%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px var(--card-shadow-hover);
-}
-
-.project-thumb {
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--card);
-}
-
-.project-thumb-1 {
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-}
-
-.project-thumb-2 {
-  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
-}
-
-.project-thumb-icon {
-  width: 56px;
-  height: 56px;
-}
-
-.project-body {
-  padding: 24px 26px 28px;
-}
-
-.project-body h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.project-body p {
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  margin: 0 0 16px;
-}
-
-.tech-tags {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tech-tags li {
-  background: var(--accent-soft);
-  color: var(--accent-dark);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 20px;
-}
-
 /* ---------- Footer ---------- */
 
 footer {
@@ -799,14 +712,6 @@ footer {
     flex-direction: column;
     padding: 40px 6%;
   }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    gap: 36px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -843,14 +748,6 @@ footer {
 
   .divider {
     display: none;
-  }
-
-  .stats {
-    gap: 24px;
-  }
-
-  .stat-num {
-    font-size: 1.9rem;
   }
 }
 

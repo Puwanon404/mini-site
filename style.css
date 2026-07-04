@@ -288,7 +288,7 @@ header nav a:hover {
 .slide {
   width: 50%;
   flex-shrink: 0;
-  padding-right: 44px;
+  padding: 0 44px;
   box-sizing: border-box;
 }
 
@@ -347,11 +347,11 @@ header nav a:hover {
 }
 
 .arrow-next {
-  right: 4px;
+  right: 6px;
 }
 
 .arrow-prev {
-  left: 4px;
+  left: 6px;
 }
 
 .slide-dots {
@@ -439,7 +439,7 @@ header nav a:hover {
   border-bottom: 2px solid var(--accent);
   white-space: nowrap;
   position: absolute;
-  top: 106px;
+  top: 172px;
   left: 50%;
   transform: translateX(-50%);
   transition: top 0.45s cubic-bezier(0.65, 0, 0.35, 1),
@@ -458,7 +458,7 @@ header nav a:hover {
 
 .col-icon {
   position: absolute;
-  top: 32px;
+  top: 96px;
   left: 50%;
   width: 64px;
   height: 64px;

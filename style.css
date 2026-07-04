@@ -343,8 +343,8 @@ header nav a:hover {
 }
 
 .col:hover h2 {
-  top: 2px;
-  left: 0;
+  top: 20px;
+  left: 34px;
   transform: translateX(0);
 }
 
